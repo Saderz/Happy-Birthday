@@ -274,7 +274,7 @@ function reveal() {
     beforeCandle.style.setProperty('--candleAfterAnimation','none 0 ease 0 1 normal none running');
 
     var image = document.createElement("img");
-    image.setAttribute("src", "/assets/img/hanhlienggg.jpg");
+    image.setAttribute("src", "../img/hanhlienggg.jpg");
     image.setAttribute("class", "img");
     document.getElementsByClassName("text")[0].appendChild(image);
 
