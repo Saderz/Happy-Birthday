@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+
+html,
+body,
+.container {
+    height: 100%;
+    font-family: 'Kaushan Script', 'Sail', cursive;
+}
+
+body {
+    background: #e74;
+    overflow: hidden;
+    background-image: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
+}
+
+div#beach,
+canvas#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+div#video {
+    position: absolute;
+    right: 243px;
+    bottom: 200px;
+}
+
+div#video iframe {
+    width: 255px;
+    height: 155px;
+}
+
+.merrywrap {
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+    background-color: #ffd1f3;
+    transition: background-color .5s ease;
+}
+
+.giftbox {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 50%;
+    margin-left: -150px;
+    bottom: 40px;
+    z-index: 10;
+}
+
+.giftbox>div {
+    background: #34495e;
+    position: absolute;
+}
+
+.giftbox>div:after,
+.giftbox>div:before {
+    position: absolute;
+    content: "";
+    top: 0;
+}
+
+.giftbox:after {
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    content: "Click Me!";
+    left: 0;
+    bottom: 0;
+    font-size: 24px;
+    text-align: center;
+    transform: rotate(-20deg);
+    transform-origin: 0 0;
+}
+
+.giftbox .cover {
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 25%;
+    z-index: 2;
+}
+
+.giftbox .cover:before {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    width: 50px;
+    transform: translateX(-50%);
+    background: #fdc56d;
+}
+
+.giftbox .cover>div {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+}
+
+.giftbox .cover>div:before,
+.giftbox .cover>div:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    box-shadow: inset 0 0 0 15px #fdc56d;
+    border-radius: 30px;
+    transform-origin: 50% 100%;
+}
+
+.giftbox .cover>div:before {
+    transform: translateX(-45%) skewY(40deg);
+}
+
+.giftbox .cover>div:after {
+    transform: translateX(45%) skewY(-40deg);
+}
+
+.giftbox .box {
+    right: 5%;
+    left: 5%;
+    height: 80%;
+    bottom: 0;
+}
+
+.giftbox .box:before {
+    width: 50px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fdc56d;
+}
+
+.giftbox .box:after {
+    width: 100%;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.step-1 .giftbox {
+    animation: wobble 0.5s linear infinite forwards;
+}
+
+.step-1 .cover {
+    animation: wobble 0.5s linear infinite 0.1s forwards;
+}
+
+.step-1 .icons .row span {
+    opacity: 1;
+}
+
+.step-2 .giftbox:after {
+    opacity: 0;
+}
+
+.step-3 .giftbox,
+.step-4 .giftbox {
+    opacity: 0;
+    z-index: 1;
+}
+
+.step-3 .giftbox:after,
+.step-4 .giftbox:after {
+    opacity: 0;
+}
+
+.step-2 .giftbox .cover {
+    animation: flyUp 0.4s ease-in forwards;
+}
+
+.step-2 .giftbox .box {
+    animation: flyDown 0.2s ease-in 0.05s forwards;
+}
+
+@keyframes wobble {
+    25% {
+        transform: rotate(4deg);
+    }
+
+    75% {
+        transform: rotate(-2deg);
+    }
+}
+
+@keyframes flyUp {
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(20deg);
+        opacity: 0;
+    }
+}
+
+@keyframes flyDown {
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes neon {
+    from {
+        text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92);
+    }
+
+    to {
+        text-shadow: 0 0 6px rgba(202, 228, 225, 0.98), 0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58), 0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88), 0 0 60px #1e84f2;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    div#video {
+        right: 180px;
+        bottom: 248px;
+    }
+
+    div#video video {
+        width: 330px;
+        height: 450px;
+    }
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 8px;
+    box-shadow: 0 20px 45px rgba(120, 76, 10, 0.25);
+}
+
+.cake {
+    width: 100%;
+    position: absolute;
+    bottom: 60px;
+}
+
+.bottom-layer,
+.top-layer,
+.middle-layer {
+    border-radius: 8px;
+    height: 80px;
+    width: 240px;
+    position: relative;
+    margin: auto;
+    background-repeat: repeat;
+    background-size: 100% 100%, 60px 100px;
+    background-position: 28px 0;
+    background-image: linear-gradient(transparent 50px,
+            #e3a953 50px,
+            #e3a953 60px,
+            transparent 60px),
+        radial-gradient(circle at 30px 5px, #713e16 30px, #eac284 31px);
+}
+
+.middle-layer {
+    transform: scale(0.85);
+    top: 72px;
+    animation: rise-1 2s forwards;
+}
+
+@keyframes rise-1 {
+    100% {
+        top: 7px;
+    }
+}
+
+.top-layer {
+    transform: scale(0.7);
+    top: 144px;
+    animation: rise-2 2s 2s forwards;
+}
+
+@keyframes rise-2 {
+    100% {
+        top: 26px;
+    }
+}
+
+.candle {
+    background: repeating-linear-gradient(45deg,
+            #fd3018 0,
+            #fd3018 5px,
+            #ffa89e 5px,
+            #ffa89e 10px);
+    height: 45px;
+    width: 15px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: rise-3 1s 4s forwards;
+}
+
+@keyframes rise-3 {
+    100% {
+        bottom: 202px;
+    }
+}
+
+.candle:after {
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background-color: #ffee54;
+    border-radius: 0 50% 50% 50%;
+    transform: scale(0) rotate(45deg);
+    bottom: 50px;
+    left: -0.5px;
+    animation: var(--candleAfterAnimation,flame 1.5s 5s forwards);
+}
+
+@keyframes flame {
+    100% {
+        transform: scale(1) rotate(45deg);
+    }
+}
+
+.text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    transition: .3s;
+    opacity: 0;
+    width: 445px;
+    font-size: 20px;
+    left: 100px;
+    top: 100px;
+    animation-delay: calc(.2s * var(--i));
+    z-index: -1;
+}
+
+.img{
+    border-radius: 4px;
+    width: 350px;
+}
+
+.word {
+    margin-top: 18px;
+    text-align: center;
+}
+
+@keyframes waviy {
+    0%,
+    40%,
+    100% {
+        transform: translateY(0)
+    }
+
+    20% {
+        transform: translateY(-5px)
+    }
+}
