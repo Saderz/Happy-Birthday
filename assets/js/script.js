@@ -233,7 +233,7 @@ function reveal() {
   }
 
   var ifrm = document.createElement("video");
-  ifrm.src = "./assets/img/HappyBirthdaysong.mp4"
+  ifrm.src = "../img/HappyBirthdaysong.mp4"
   ifrm.setAttribute("onclick", "typeWriter()");
   ifrm.controls = true;
   ifrm.muted = false;
