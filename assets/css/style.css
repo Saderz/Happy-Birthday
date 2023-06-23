@@ -383,3 +383,15 @@ div#video iframe {
         transform: translateY(-5px)
     }
 }
+
+@media (max-width: 600px) {
+    .giftbox {
+        position: absolute;
+        width: 180px;
+        height: 140px;
+        left: 50%;
+        margin-left: -185px;
+        bottom: 155px;
+        z-index: 10;
+    }
+}
