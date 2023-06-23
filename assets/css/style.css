@@ -390,8 +390,13 @@ div#video iframe {
         width: 180px;
         height: 140px;
         left: 50%;
-        margin-left: -105px;
+        margin-left: -90px;
         bottom: 310px;
         z-index: 10;
+    }
+
+    .container {
+        width: 340px;
+        height: 370px;
     }
 }
