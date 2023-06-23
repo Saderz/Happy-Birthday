@@ -390,8 +390,8 @@ div#video iframe {
         width: 180px;
         height: 140px;
         left: 50%;
-        margin-left: -185px;
-        bottom: 155px;
+        margin-left: -105px;
+        bottom: 310px;
         z-index: 10;
     }
 }
