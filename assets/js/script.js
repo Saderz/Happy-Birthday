@@ -189,12 +189,13 @@ function loop() {
 }
 
 window.onload = function () {
+  var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
   var merrywrap = document.getElementById("merrywrap");
   var box = merrywrap.getElementsByClassName("giftbox")[0];
   var step = 1;
   var stepMinutes = [2000, 2000, 1000, 1000];
   function init() {
-    box.addEventListener("click", openBox, false);
+    box.addEventListener(touchEvent, openBox, false);
   }
   function stepClass(step) {
     merrywrap.className = 'merrywrap';
@@ -202,7 +203,7 @@ window.onload = function () {
   }
   function openBox() {
     if (step === 1) {
-      box.removeEventListener("click", openBox, false);
+      box.removeEventListener(touchEvent, openBox, false);
     }
     stepClass(step);
     if (step === 3) {
@@ -234,7 +235,7 @@ function reveal() {
 
   var ifrm = document.createElement("video");
   ifrm.src = "../img/HappyBirthdaysong.mp4"
-  ifrm.setAttribute("onclick", "typeWriter()");
+  ifrm.setAttribute(touchEvent, "typeWriter()");
   ifrm.controls = true;
   ifrm.muted = false;
   document.querySelector('#video').appendChild(ifrm);
@@ -250,7 +251,7 @@ function reveal() {
   
   var divCandle = document.createElement("div");
   divCandle.setAttribute("class", "candle");
-  divCandle.addEventListener('click', clickText);
+  divCandle.addEventListener(touchEvent, clickText);
   divCake.appendChild(divCandle);
 
   var divTop = document.createElement("div");
