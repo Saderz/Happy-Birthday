@@ -1,3 +1,4 @@
+var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 window.requestAnimFrame = function () {
   return window.requestAnimationFrame ||
   window.webkitRequestAnimationFrame ||
@@ -189,7 +190,6 @@ function loop() {
 }
 
 window.onload = function () {
-  var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
   var merrywrap = document.getElementById("merrywrap");
   var box = merrywrap.getElementsByClassName("giftbox")[0];
   var step = 1;
