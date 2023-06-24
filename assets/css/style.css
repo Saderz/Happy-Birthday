@@ -415,5 +415,6 @@ div#video iframe {
     .text {
         width: 350px;
         left: 20px;
+        top: 50px;
     }
 }
