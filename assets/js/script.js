@@ -256,6 +256,8 @@ function reveal() {
   divCandle.setAttribute("class", "candle");
   divCandle.addEventListener("click", clickText);
   divCandle.addEventListener("touchstart", clickText);
+  divCandle.setAttribute("onclick", "clickText()");
+  divCandle.setAttribute("ontouchstart", "clickText()");
   divCake.appendChild(divCandle);
 
   var divTop = document.createElement("div");
