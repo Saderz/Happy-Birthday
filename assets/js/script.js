@@ -237,8 +237,8 @@ function reveal() {
 
   var ifrm = document.createElement("video");
   ifrm.src = "../img/HappyBirthdaysong.mp4"
-  ifrm.setAttribute("onclick", "typeWriter()");
-  ifrm.setAttribute("ontouchstart", "typeWriter()");
+  // ifrm.setAttribute("onclick", "typeWriter()");
+  // ifrm.setAttribute("ontouchstart", "typeWriter()");
   ifrm.controls = true;
   ifrm.muted = false;
   document.querySelector('#video').appendChild(ifrm);
@@ -275,6 +275,8 @@ function reveal() {
   divContainer.appendChild(divCake);
   divContainer.appendChild(divWord);
   document.body.appendChild(divContainer);
+
+  typeWriter();
 
   function clickText() {
     var beforeCandle = document.getElementsByClassName("candle")[0];
