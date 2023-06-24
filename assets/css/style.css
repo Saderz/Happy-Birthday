@@ -398,12 +398,13 @@ div#video iframe {
     .container {
         width: 340px;
         height: 370px;
+        top: 35%;
     }
 
     div#video {
         position: absolute;
         right: 112px;
-        bottom: 0px;
+        bottom: 120px;
     }
 
     div#video video {
