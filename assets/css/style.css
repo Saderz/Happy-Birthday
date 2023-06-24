@@ -410,4 +410,9 @@ div#video iframe {
         width: 160px;
         height: 220px;
     }
+
+    .text {
+        width: 350px;
+        left: 20px;
+    }
 }

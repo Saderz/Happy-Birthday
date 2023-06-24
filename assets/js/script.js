@@ -280,6 +280,8 @@ function reveal() {
 
     $(".text").animate({"opacity": 1}, "normal");
     document.getElementsByClassName("text")[0].style.animation = "waviy 1s infinite";
+    $(".container").animate({"opacity": 0}, "normal");
+    $("#video").animate({"opacity": 0}, "normal");
   }
 }
 
